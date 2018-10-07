@@ -52,7 +52,13 @@ class ERC20SwapProvider {
       }
     )
 
-    return ERC20SwapInstance.address
+    
+
+    var txh = ERC20SwapInstance.transactionHash.toString(16);
+
+    console.log(txh);
+
+    return txh;
   }
 
   async claimSwap (initiationTxHash, recipientAddress, refundAddress, secret, expiration) {
