@@ -40,8 +40,11 @@ const ethereum = new Client()
   var secret = "123"; // u decide :D
   var secretHash = sha256(secret);
 
-  // initiateSwap(value, recipientAddress, refundAddress, secretHash, expiration)
-  var tnx_receipt = await ethereum.initiateSwap(value, recipientAddress, refundAddress, secretHash, expiration);
-  console.log(tnx_receipt)
+  var initiationTxHash = await ethereum.initiateSwap(value, recipientAddress, refundAddress, secretHash, expiration);
+  console.log(initiationTxHash);
+
+  var tnx_hash = await ethereum.claimSwap(initiationTxHash, recipientAddress, refundAddress, secret, expiration);
+  console.log(tnx_hash);
+
   
 })();
