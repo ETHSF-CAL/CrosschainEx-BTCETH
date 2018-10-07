@@ -1,0 +1,23 @@
+{
+  "name": "cal2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@liquality/chainabstractionlayer": "^0.1.0",
+    "babel-runtime": "^6.26.0",
+    "js-sha256": "^0.9.0",
+    "openzeppelin-solidity": "^1.12.0",
+    "truffle-contract": "^3.0.6",
+    "web3": "^1.0.0-beta.36"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
